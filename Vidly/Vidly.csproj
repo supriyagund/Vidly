@@ -273,8 +273,41 @@
     <Compile Include="Migrations\201806170531246_SetCustomerBirthDate.Designer.cs">
       <DependentUpon>201806170531246_SetCustomerBirthDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806170630506_AddMovie.cs" />
+    <Compile Include="Migrations\201806170630506_AddMovie.Designer.cs">
+      <DependentUpon>201806170630506_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170647102_AddGenreToMovie.cs" />
+    <Compile Include="Migrations\201806170647102_AddGenreToMovie.Designer.cs">
+      <DependentUpon>201806170647102_AddGenreToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170650422_AddAnnotationToMovieName.cs" />
+    <Compile Include="Migrations\201806170650422_AddAnnotationToMovieName.Designer.cs">
+      <DependentUpon>201806170650422_AddAnnotationToMovieName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170651452_AddDateAddedToMovie.cs" />
+    <Compile Include="Migrations\201806170651452_AddDateAddedToMovie.Designer.cs">
+      <DependentUpon>201806170651452_AddDateAddedToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170653064_AddReleaseDateToMovie.cs" />
+    <Compile Include="Migrations\201806170653064_AddReleaseDateToMovie.Designer.cs">
+      <DependentUpon>201806170653064_AddReleaseDateToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170654321_AddNumberInStockToMovie.cs" />
+    <Compile Include="Migrations\201806170654321_AddNumberInStockToMovie.Designer.cs">
+      <DependentUpon>201806170654321_AddNumberInStockToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170659251_PopulateGenres.cs" />
+    <Compile Include="Migrations\201806170659251_PopulateGenres.Designer.cs">
+      <DependentUpon>201806170659251_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170704459_UpdateGenres.cs" />
+    <Compile Include="Migrations\201806170704459_UpdateGenres.Designer.cs">
+      <DependentUpon>201806170704459_UpdateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModel.cs" />
@@ -371,6 +404,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806170531246_SetCustomerBirthDate.resx">
       <DependentUpon>201806170531246_SetCustomerBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170630506_AddMovie.resx">
+      <DependentUpon>201806170630506_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170647102_AddGenreToMovie.resx">
+      <DependentUpon>201806170647102_AddGenreToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170650422_AddAnnotationToMovieName.resx">
+      <DependentUpon>201806170650422_AddAnnotationToMovieName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170651452_AddDateAddedToMovie.resx">
+      <DependentUpon>201806170651452_AddDateAddedToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170653064_AddReleaseDateToMovie.resx">
+      <DependentUpon>201806170653064_AddReleaseDateToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170654321_AddNumberInStockToMovie.resx">
+      <DependentUpon>201806170654321_AddNumberInStockToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170659251_PopulateGenres.resx">
+      <DependentUpon>201806170659251_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170704459_UpdateGenres.resx">
+      <DependentUpon>201806170704459_UpdateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
