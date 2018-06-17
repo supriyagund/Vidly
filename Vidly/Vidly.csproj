@@ -245,8 +245,13 @@
     <Compile Include="Migrations\201806170258001_AddIsSubscribedToNewsletter.Designer.cs">
       <DependentUpon>201806170258001_AddIsSubscribedToNewsletter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806170311486_AddMembershipType.cs" />
+    <Compile Include="Migrations\201806170311486_AddMembershipType.Designer.cs">
+      <DependentUpon>201806170311486_AddMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -321,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806170258001_AddIsSubscribedToNewsletter.resx">
       <DependentUpon>201806170258001_AddIsSubscribedToNewsletter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170311486_AddMembershipType.resx">
+      <DependentUpon>201806170311486_AddMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
