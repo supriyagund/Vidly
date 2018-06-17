@@ -249,6 +249,10 @@
     <Compile Include="Migrations\201806170311486_AddMembershipType.Designer.cs">
       <DependentUpon>201806170311486_AddMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806170320032_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201806170320032_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201806170320032_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -329,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806170311486_AddMembershipType.resx">
       <DependentUpon>201806170311486_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170320032_PopulateMembershipTypes.resx">
+      <DependentUpon>201806170320032_PopulateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
