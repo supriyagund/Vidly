@@ -305,10 +305,15 @@
     <Compile Include="Migrations\201806170704459_UpdateGenres.Designer.cs">
       <DependentUpon>201806170704459_UpdateGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806211301298_AddAnnotationsToMembershipTypeName.cs" />
+    <Compile Include="Migrations\201806211301298_AddAnnotationsToMembershipTypeName.Designer.cs">
+      <DependentUpon>201806211301298_AddAnnotationsToMembershipTypeName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsforMembership.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -433,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806170704459_UpdateGenres.resx">
       <DependentUpon>201806170704459_UpdateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806211301298_AddAnnotationsToMembershipTypeName.resx">
+      <DependentUpon>201806211301298_AddAnnotationsToMembershipTypeName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
