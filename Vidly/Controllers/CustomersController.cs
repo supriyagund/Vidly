@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
@@ -10,20 +9,15 @@ namespace Vidly.Controllers
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
+
         public CustomersController()
         {
             _context = new ApplicationDbContext();
         }
+
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
-        }
-        //customers
-        public ViewResult Index()
-        {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-
-            return View(customers);
         }
 
         public ActionResult New()
@@ -35,7 +29,7 @@ namespace Vidly.Controllers
                 MembershipTypes = membershipTypes
             };
 
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }
 
         [HttpPost]
@@ -52,6 +46,7 @@ namespace Vidly.Controllers
 
                 return View("CustomerForm", viewModel);
             }
+
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
             else
@@ -68,7 +63,11 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Customers");
         }
 
-        //customers/details/id
+        public ViewResult Index()
+        {
+            return View();
+        }
+
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);

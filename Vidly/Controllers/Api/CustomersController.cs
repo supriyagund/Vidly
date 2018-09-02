@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AutoMapper;
+using System;
+using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using Vidly.Models;
 using Vidly.Dtos;
-using AutoMapper;
+using Vidly.Models;
 
 namespace Vidly.Controllers.Api
 {
@@ -17,18 +15,20 @@ namespace Vidly.Controllers.Api
         public CustomersController()
         {
             _context = new ApplicationDbContext();
-
         }
 
         // GET /api/customers
         public IHttpActionResult GetCustomers()
         {
-            var customerDtos = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            var customerDtos = _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok(customerDtos);
         }
 
-        // GET /api/customers/id
+        // GET /api/customers/1
         public IHttpActionResult GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -54,7 +54,7 @@ namespace Vidly.Controllers.Api
             return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
-        // PUT /api/customers/id
+        // PUT /api/customers/1
         [HttpPut]
         public IHttpActionResult UpdateCustomer(int id, CustomerDto customerDto)
         {
@@ -73,7 +73,7 @@ namespace Vidly.Controllers.Api
             return Ok();
         }
 
-        // DELETE /api/customers/id
+        // DELETE /api/customers/1
         [HttpDelete]
         public IHttpActionResult DeleteCustomer(int id)
         {
